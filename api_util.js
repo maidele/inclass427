@@ -1,9 +1,8 @@
-import { getPosts } from './api.js';
-
-function displayPosts() {
+import {getData} from './api.js'
+export function displayData
     const container = document.getElementById('postContainer');
 
-    getPosts()
+    getData()
     .then (posts => {
         posts.slice(0,5).forEach (post => {
             const div = document.createElement('div');
@@ -16,11 +15,5 @@ function displayPosts() {
         {err.message}</p>`;
     
     })
-}
-displayPosts();
 
-
-
-import {displayData} from '.api_utils.js'
-
-displayData()
+displayData();
